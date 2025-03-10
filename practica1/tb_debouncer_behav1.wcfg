@@ -11,14 +11,14 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0.000 ns"></ZoomStartTime>
-      <ZoomEndTime time="1,000.001 ns"></ZoomEndTime>
-      <Cursor1Time time="1,000.000 ns"></Cursor1Time>
+      <ZoomEndTime time="821.001 ns"></ZoomEndTime>
+      <Cursor1Time time="0.000 ns"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="73"></NameColumnWidth>
+      <NameColumnWidth column_width="146"></NameColumnWidth>
       <ValueColumnWidth column_width="72"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="10" />
+   <WVObjectSize size="21" />
    <wvobject fp_name="/tb_debouncer/rst_n" type="logic">
       <obj_property name="ElementShortName">rst_n</obj_property>
       <obj_property name="ObjectShortName">rst_n</obj_property>
@@ -51,12 +51,56 @@
       <obj_property name="ElementShortName">clk_period</obj_property>
       <obj_property name="ObjectShortName">clk_period</obj_property>
    </wvobject>
-   <wvobject fp_name="/tb_debouncer/UUT/current_state" type="other">
-      <obj_property name="ElementShortName">current_state</obj_property>
-      <obj_property name="ObjectShortName">current_state</obj_property>
+   <wvobject fp_name="/tb_debouncer/UUT/rst_n" type="logic">
+      <obj_property name="ElementShortName">rst_n</obj_property>
+      <obj_property name="ObjectShortName">rst_n</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/ena" type="logic">
+      <obj_property name="ElementShortName">ena</obj_property>
+      <obj_property name="ObjectShortName">ena</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_debouncer/UUT/sig_in" type="logic">
       <obj_property name="ElementShortName">sig_in</obj_property>
       <obj_property name="ObjectShortName">sig_in</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/debounced" type="logic">
+      <obj_property name="ElementShortName">debounced</obj_property>
+      <obj_property name="ObjectShortName">debounced</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/current_state" type="other">
+      <obj_property name="ElementShortName">current_state</obj_property>
+      <obj_property name="ObjectShortName">current_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/next_state" type="other">
+      <obj_property name="ElementShortName">next_state</obj_property>
+      <obj_property name="ObjectShortName">next_state</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/count" type="array">
+      <obj_property name="ElementShortName">count[19:0]</obj_property>
+      <obj_property name="ObjectShortName">count[19:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/time_elapsed" type="logic">
+      <obj_property name="ElementShortName">time_elapsed</obj_property>
+      <obj_property name="ObjectShortName">time_elapsed</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/g_timeout" type="other">
+      <obj_property name="ElementShortName">g_timeout</obj_property>
+      <obj_property name="ObjectShortName">g_timeout</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/g_clock_freq_KHZ" type="other">
+      <obj_property name="ElementShortName">g_clock_freq_KHZ</obj_property>
+      <obj_property name="ObjectShortName">g_clock_freq_KHZ</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/c_cycles" type="other">
+      <obj_property name="ElementShortName">c_cycles</obj_property>
+      <obj_property name="ObjectShortName">c_cycles</obj_property>
+   </wvobject>
+   <wvobject fp_name="/tb_debouncer/UUT/c_counter_width" type="other">
+      <obj_property name="ElementShortName">c_counter_width</obj_property>
+      <obj_property name="ObjectShortName">c_counter_width</obj_property>
    </wvobject>
 </wave_config>

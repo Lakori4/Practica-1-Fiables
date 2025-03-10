@@ -54,21 +54,20 @@
 #endif
 typedef void (*funcp)(char *, char *);
 extern int main(int, char**);
+IKI_DLLESPEC extern void execute_33(char*, char *);
 IKI_DLLESPEC extern void execute_34(char*, char *);
-IKI_DLLESPEC extern void execute_35(char*, char *);
 IKI_DLLESPEC extern void execute_31(char*, char *);
 IKI_DLLESPEC extern void execute_32(char*, char *);
-IKI_DLLESPEC extern void execute_33(char*, char *);
 IKI_DLLESPEC extern void transaction_1(char*, char*, unsigned, unsigned, unsigned);
 IKI_DLLESPEC extern void vhdl_transfunc_eventcallback(char*, char*, unsigned, unsigned, unsigned, char *);
-funcp funcTab[7] = {(funcp)execute_34, (funcp)execute_35, (funcp)execute_31, (funcp)execute_32, (funcp)execute_33, (funcp)transaction_1, (funcp)vhdl_transfunc_eventcallback};
-const int NumRelocateId= 7;
+funcp funcTab[6] = {(funcp)execute_33, (funcp)execute_34, (funcp)execute_31, (funcp)execute_32, (funcp)transaction_1, (funcp)vhdl_transfunc_eventcallback};
+const int NumRelocateId= 6;
 
 void relocate(char *dp)
 {
-	iki_relocate(dp, "xsim.dir/tb_debouncer_behav/xsim.reloc",  (void **)funcTab, 7);
-	iki_vhdl_file_variable_register(dp + 4280);
-	iki_vhdl_file_variable_register(dp + 4336);
+	iki_relocate(dp, "xsim.dir/tb_debouncer_behav/xsim.reloc",  (void **)funcTab, 6);
+	iki_vhdl_file_variable_register(dp + 3848);
+	iki_vhdl_file_variable_register(dp + 3904);
 
 
 	/*Populate the transaction function pointer field in the whole net structure */
@@ -103,6 +102,7 @@ extern SYSTEMCLIB_IMP_DLLSPEC char** xsim_argv_copy ;
 int main(int argc, char **argv)
 {
     iki_heap_initialize("ms", "isimmm", 0, 2147483648) ;
+    iki_set_xsimdir_location_if_remapped(argc, argv)  ;
     iki_set_sv_type_file_path_name("xsim.dir/tb_debouncer_behav/xsim.svtype");
     iki_set_crvs_dump_file_path_name("xsim.dir/tb_debouncer_behav/xsim.crvsdump");
     void* design_handle = iki_create_design("xsim.dir/tb_debouncer_behav/xsim.mem", (void *)relocate, (void *)sensitize, (void *)simulate, (void*)0, 0, isimBridge_getWdbWriter(), 0, argc, argv);
