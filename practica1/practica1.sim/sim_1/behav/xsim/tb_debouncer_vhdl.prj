@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../practica1.srcs/sources_1/imports/RTL/debouncer.vhd" \
+"../../../../practica1.srcs/sources_1/imports/practica 1/Sim/tb_debouncer.vhd" \
+
+# Do not sort compile order
+nosort
