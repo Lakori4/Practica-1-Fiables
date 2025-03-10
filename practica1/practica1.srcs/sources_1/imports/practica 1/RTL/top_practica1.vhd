@@ -102,11 +102,11 @@ begin
   begin
     if (rst_n = '0') then
 	  -- -----------------------------------------------------------------------------
-      -- Completar con el valor inicial del registro
+      LED_register <= '0';
 	  -- -----------------------------------------------------------------------------
     elsif rising_edge(clk100Mhz) then
 	  -- -----------------------------------------------------------------------------	
-      -- Registrar valor
+      LED_register <= BTNC;
 	  -- -----------------------------------------------------------------------------
     end if;
   end process;  
@@ -114,7 +114,7 @@ begin
   toggleLED: process(LED_register, Toggle_LED)
   begin 
   -- -----------------------------------------------------------------------------
-    state_LED <= --Completar con la lógica del LED (toggle)
+    state_LED <= LED_register xor Toggle_LED; --Completar con la lógica del LED (toggle)
   -- -----------------------------------------------------------------------------		
   end process;
   -- Connect LED_register to the output
